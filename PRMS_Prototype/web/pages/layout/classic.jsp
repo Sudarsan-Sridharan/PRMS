@@ -5,6 +5,8 @@
 <link href="<c:url value='/css/main.css'/>" rel="stylesheet"
 	type="text/css" />
 
+<link href="<c:url value='/css/datepickr.css'/>" rel="stylesheet"
+	type="text/css" />
 <table class="borderAll">
 	<tr>
 		<td colspan="2"><tiles:insertAttribute name="header" /></td>

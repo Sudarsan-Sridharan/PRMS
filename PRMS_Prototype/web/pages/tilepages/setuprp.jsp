@@ -17,9 +17,9 @@
 		<center>
 			<table cellpadding=4 cellspacing=2 border=0>
 				<tr>
-					<th width="30%"><fmt:message key="label.crudrp.name" /></th>
+					<!--<th width="30%"><fmt:message key="label.crudrp.name" /></th>
 					<th width="45%"><fmt:message key="label.crudrp.description" /></th>
-					<th width="25%"><fmt:message key="label.crudrp.duration" /></th>
+					<th width="25%"><fmt:message key="label.crudrp.duration" /></th>-->
 				</tr>
 				<tr>
 					<td><fmt:message key="label.crudrp.name" /></td>
@@ -37,7 +37,7 @@
 				<tr>
 					<td><fmt:message key="label.crudrp.description" /></td>
 					<td><input type="text" name="description"
-						value="${param['description']}" size=45 maxlength=20></td>
+						value="${param['description']}" size=45 maxlength=50></td>
 				</tr>
 				<tr>
 					<td><fmt:message key="label.crudrp.duration" /></td>

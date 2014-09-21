@@ -113,9 +113,10 @@ public class ProcessController extends HttpServlet {
 				list = rdel3.findAllRP();
 			}
 			request.getSession().setAttribute("searchrplist", list);
+//			RequestDispatcher rd3 = getServletContext().getRequestDispatcher(
+//					"/pages/searchrp.jsp");
 			RequestDispatcher rd3 = getServletContext().getRequestDispatcher(
-					"/pages/searchrp.jsp");
-			;
+					"/pages/reviewselectrp.jsp");
 			rd3.forward(request, response);
 			break;
 		default:

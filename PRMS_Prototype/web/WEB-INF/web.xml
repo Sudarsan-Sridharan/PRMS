@@ -20,8 +20,13 @@
   <servlet>
     <servlet-name>frontController</servlet-name>
     <servlet-class>
-			sg.edu.nus.iss.phoenix.core.controller.PhoenixFrontController
-		</servlet-class>
+    sg.edu.nus.iss.phoenix.core.controller.PhoenixFrontController
+    </servlet-class>
+    <init-param>
+            <param-name>route</param-name>
+            <param-value>/WEB-INF/route.properties</param-value>
+        </init-param>
+        
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>

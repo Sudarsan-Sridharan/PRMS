@@ -12,7 +12,7 @@
 <body>
         <h1><fmt:message key="label.crudrp"/></h1>
         <c:url var="url" scope="page" value="/pages/setuprp.jsp">
-        		<c:param name="name" value=""/>
+        	<c:param name="name" value=""/>
                 <c:param name="description" value=""/>
                 <c:param name="duration" value=""/>
                 <c:param name="insert" value="true"/>

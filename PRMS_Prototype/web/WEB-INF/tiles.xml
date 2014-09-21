@@ -9,11 +9,18 @@
 		<put-attribute name="body" value="/pages/layout/body.jsp" />
 		<put-attribute name="footer" value="/pages/layout/footer.jsp" />
 	</definition>
+        <definition name="popUpPage" template="/pages/layout/popup.jsp">
+		<put-attribute name="body" value="/pages/layout/body.jsp" />
+		<put-attribute name="footer" value="" />
+	</definition>
 	<definition name="loginPage" extends="homePage">
 		<put-attribute name="body" value="/pages/tilepages/login.jsp" />
 	</definition>
 	<definition name="errorPage" extends="homePage">
 		<put-attribute name="body" value="/pages/tilepages/error.jsp" />
+	</definition>
+        <definition name="generalErrorPage" extends="homePage">
+		<put-attribute name="body" value="/pages/tilepages/generalerror.jsp" />
 	</definition>
 	<definition name="searchrpPage" extends="homePage">
 		<put-attribute name="body" value="/pages/tilepages/searchrp.jsp" />
@@ -24,4 +31,17 @@
 	<definition name="setuprpPage" extends="homePage">
 		<put-attribute name="body" value="/pages/tilepages/setuprp.jsp" />
 	</definition>
+        <definition name="crudschedulePage" extends="homePage">
+		<put-attribute name="body" value="/pages/tilepages/crudschedule.jsp" />
+	</definition>
+	<definition name="setupschedulePage" extends="homePage">
+		<put-attribute name="body" value="/pages/tilepages/setupschedule.jsp" />
+	</definition>
+        <definition name="selectpresenterproducerPage" extends="popUpPage">
+		<put-attribute name="body" value="/pages/tilepages/selectpresenterproducer.jsp" />
+	</definition>
+        <definition name="reviewselectrpPage" extends="popUpPage">
+		<put-attribute name="body" value="/pages/tilepages/reviewselectrp.jsp" />
+	</definition>
+        
 </tiles-definitions>

@@ -31,6 +31,21 @@
 				</a>
 			</td>
 	</tr>
+<!--        <tr>
+		<td>
+				<a href="<c:url value="/controller/searchschedule"/>"> <fmt:message
+						key="caption.menu.searchsch" />
+				</a>
+			</td>
+	</tr>-->
+
+	<tr>
+		<td>
+				<a href="<c:url value="/controller/loadschedule"/>"> <fmt:message
+						key="caption.menu.managesch" />
+				</a>
+			</td>
+	</tr>
 	</c:if>
 	<tr>
 		<td><a href="<c:url value="/controller/logout"/>"> <fmt:message

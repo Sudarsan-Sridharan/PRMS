@@ -1,7 +1,6 @@
 package sg.edu.nus.iss.phoenix.core.controller;
 
 import java.io.IOException;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PhoenixFrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+        private static final String ROUTEFILE = "route.properties";
+        
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -52,17 +52,19 @@ public class PhoenixFrontController extends HttpServlet {
 		System.out.println("PATH" + pathInfo);
 		System.out.println("ACTION" + action);
 		String result = chooseUseCase(action);
+                System.out.println(result);
 		RequestDispatcher rd = getServletContext().getRequestDispatcher(result);
 		rd.forward(request, response);
 	}
 
-	private String chooseUseCase(String action) {
+	private String chooseUseCase(String action)  {
+//            String url="";
 		switch (action) {
 		case "login":
 			return "/LoginController/login";
 		case "searchrp":
 			return "/ProcessController/search";
-		case "setuprp":
+                case "setuprp":
 			return "/ProcessController/process";
 		case "crudrp":
 			return "/CRUDRpController";
@@ -70,11 +72,39 @@ public class PhoenixFrontController extends HttpServlet {
 			return "/ProcessController/load";	
 		case "deleterp":
 			return "/ProcessController/delete";
-		case "logout":
-			return "/LoginController/logout";
+                case "setupschedule":
+			return "/ScheduleController/process";
+		case "crudschedule":
+			return "/ScheduleController";
+		case "loadschedule":
+			return "/ScheduleController/load";
+                case "deleteschedule":
+			return "/ScheduleController/delete";
+                case "selectpresenter":
+			return "/PresenterProducerController/selectpresenter";
+		case "selectproducer":
+			return "/PresenterProducerController/selectproducer";
+                case "logout":
+			return "/ScheduleController/logout";
 		default:
 			return "/welcome.jsp";
 		}
-	}
-
+            //InputStream routing = this.getClass().getClassLoader().getResourceAsStream(ROUTEFILE);;
+            
+//            Properties props = new Properties();
+//            try{
+//            props.load(PhoenixFrontController.class.getClassLoader().getResourceAsStream(ROUTEFILE));
+//        
+//            Set keys = props.keySet();
+//            Iterator it = keys.iterator();
+//            while(it.hasNext())
+//            {
+//                String key = (String)it.next();
+//                url = (String)props.get(key);
+//            }
+//            }catch(IOException e){
+//                e.printStackTrace();
+//            }
+//            return url;
+        }
 }
